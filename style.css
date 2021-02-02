@@ -249,10 +249,10 @@ textarea {
   bottom: 2%;
   right: 2%;
   opacity: 0;
-  animation: pop 1s linear infinite;
+  animation: popup 1s linear infinite;
 }
 
-@keyframes pop {
+@keyframes popup {
   0%{
     transform: scale(1);
   }
