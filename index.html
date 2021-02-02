@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <script src="https://use.fontawesome.com/89d25ecc90.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="home">
+        <nav>
+            <img src="/pic.jpg" alt="logo">
+            <div class="menu-links">
+                <button class="btn close"><i class="fa fa-close"></i></button>
+                <a href="#home">Home</a>
+                <a href="./learn.html">Learn</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="menu">
+                <button class="btn menu-btn"><i class="fa fa-bars"></i></button>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>Hey, I am Ashok<span class="blink">!</span></h1>
+            <a href="#about" class="btn">Know More</a>
+        </div>
+    </header>
+
+    <!-- Details Section -->
+    <section class="details" id="about">
+        <div class="details-title">
+            <h2>About Me</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="info">
+            <p class="info-desc">Hello Again! I am <span class="shadow">Ashok Thapa</span>  from Nepal and I am currently pursuing <span class="shadow">Bachelor's of Computer Application(BCA)</span> from Damak Multiple Campus (2019 onwards). I love working with computers and I tend to <span class="shadow">try every sort of stuffs</span> that I genuinely enjoy about it. Another major part of computer that I truly fell in love is <span class="shadow">programming</span> because it makes me feel like <span class="shadow">I am GOD</span>. So, overall I can say that I am tech enthusiast.</p>
+            <h3 class="skills">Skills</h3>
+            <ol class="list" type="🤜">
+                <li class="list-category" data-list="1">Web Development (Frontend)</li>
+                <ul class="sublist">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>React</li>
+                    <li>Redux</li>
+                    <li>Git</li>
+                    <li>Webpack</li>
+                </ul>
+                <li class="list-category" data-list="2">Linux</li>
+                <ul class="sublist">
+                    <li>Working with files and directories</li>
+                    <li>Devices</li>
+                    <li>FilsSystem</li>
+                    <li>Text Manipulation</li>
+                    <li>User Management</li>
+                    <li>Permissions</li>
+                    <li>Processes</li>
+                    <li>Packages and many more</li>
+                </ul>
+                <li class="list-category" data-list="3">Networking</li>
+                <ul class="sublist">
+                    <li>Network Components like routers, switches, IDS, IPS, etc </li>
+                    <li>Topology Architecture</li>
+                    <li>Physical Interface and cabling types</li>
+                    <li>Protocols and Ports</li>
+                    <li>Network Access</li>
+                    <li>IP Services and Connectivity</li>
+
+                </ul>
+            </ol>
+        </div>
+        <div></div>
+        
+
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="details-title">
+            <h2>Projects</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="project">
+            
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="form-section">
+        <div class="details-title">
+            <h2>Any Queries?</h2>
+            <div class="underline"></div>
+        </div>
+        <form>
+            <div class="input-box">
+                <label for="name">Name</label>
+                <input type="text" name="text" id="name" placeholder="Enter your Name">
+            </div>
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email"
+                placeholder="Enter valid E-mail">
+            </div>
+            <div class="input-box">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="50" rows="10" onfocus="this.value=''" onblur="this.value='Message goes here'">Enter your queries here....</textarea>
+            </div>
+            <button class="submit btn">Submit Now</button>
+            <div class="modal">
+                <button class="btn close-modal">Close</button>
+                <p>Thanks for contacting us!</p>
+            </div>
+        </form>
+    </section>
+    <a href="#home" class="scroll">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
