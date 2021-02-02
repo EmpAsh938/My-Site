@@ -33,6 +33,12 @@ listCategory.forEach(list => {
         } else {
             sublist[2].classList.remove('active-height')
         }
+    }  else if (e.currentTarget.dataset.list === "4") {
+        if (!sublist[3].classList.contains('active-height')){
+            sublist[3].classList.add('active-height')
+        } else {
+            sublist[3].classList.remove('active-height')
+        }
     }
 
 })});
