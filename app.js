@@ -3,14 +3,16 @@ const scroll = document.querySelector('.scroll');
 const sublist = document.querySelectorAll('.sublist');
 const listCategory = document.querySelectorAll('.list-category');
 const submit = document.querySelector('.submit');
-const form = document.querySelector('form');
 const menu = document.querySelector('.menu');
 const menuLinks = document.querySelector('.menu-links');
 const close = document.querySelector('.close');
 const nav = document.querySelector('nav');
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.close-modal');
-
+const cname = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+const form = document.getElementById('message-form');
 
 // Skills listing
 listCategory.forEach(list => {
@@ -59,16 +61,38 @@ function toggle(){
 
 // Message Form
 submit.addEventListener('click', submitMessage);
-form[0].addEventListener('submit', submitMessage);
+form.addEventListener('submit', submitMessage);
 function submitMessage(e){
     // alert('Currently not available!')
     e.preventDefault();
-    modal.classList.add('modal-active');
+    let cname_value = cname.value;
+    let email_value = email.value;
+    let message_value = message.value;
+    if(!cname_value || !email_value || !message_value) {
+        alert('Empty Fields');
+        return;
+    }
+    const formData = new FormData(form);
+    fetch('https://formspree.io/f/myyvyozr', {
+        method: 'post',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
 
+        if(response.ok) {
+            alert("Thanks for your submisssion");
+            form.reset();
+        } else {
+            alert("Oops! There was a problem submiiting your form.");
+        }
+    }).catch(error => {
+        alert("Oops! There was a problem submiiting your form.");
+    })
 }
 
-modalClose.addEventListener('click', (e) => {
-    e.preventDefault();
+modalClose.addEventListener('click', () => {
     modal.classList.remove('modal-active');
 })
 
